@@ -1,0 +1,19 @@
+galaxy_info:
+  author: marica.antonacci@gmail.com
+  description: Setup CTA Archive metadata tools
+  company: eXtreme-DataCloud Project
+  license: Apache
+  min_ansible_version: 2.0
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+    - name: EL
+      versions:
+        - 7
+  galaxy_tags:
+    - cta, xdc
+
+dependencies: 
+   - src: indigo-dc.docker
+     version: v1.0.0-deep

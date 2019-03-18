@@ -1,0 +1,37 @@
+---
+- name: Create working dirs
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+  with_items:
+    - "{{ cta_archive_wdir }}"
+    - "{{ cta_archive_wdir }}/metadata-extractor"
+
+- name: Download docker-compose.yml for  metadata extractor
+  get_url:
+    url: "{{ cta_archive_compose_extractor_url }}"
+    dest: "{{ cta_archive_wdir }}/metadata-extractor/docker-compose.yml"
+
+- name: Fix PWD
+  replace:
+    path: "{{ cta_archive_wdir }}/metadata-extractor/docker-compose.yml"
+    regexp: '\$PWD'
+    replace: "{{ cta_archive_wdir }}/metadata-extractor" 
+
+- name: Download ingestion agent script
+  get_url:
+    url: "{{ cta_archive_ingestion_agent_url }}"
+    dest: "{{ cta_archive_wdir }}/metadata-extractor/ingestion-agent.sh"
+
+- name: Create environment file
+  template: src=environment.j2 dest="{{ cta_archive_wdir }}/metadata-extractor/.env"
+
+- name: "Install docker-compose"
+  pip: name="docker-compose" state="present"
+
+- name: "Start the services"
+  docker_service:
+    project_src: "{{ cta_archive_wdir }}/metadata-extractor"
+    state: present
+

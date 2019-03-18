@@ -1,0 +1,15 @@
+---
+# defaults file for ansible-role-cta-archive
+cta_archive_wdir: /etc/cta_archive
+cta_archive_source_oneprovider_version: 18.02.0-rc11
+cta_archive_onezone_url: 
+cta_archive_source_space_name:
+cta_archive_source_provider: 
+cta_archive_api_token: 
+
+#
+cta_archive_compose_extractor_url: https://gitlab.in2p3.fr/CTA-LAPP/cta-archive-container/raw/master/metadata/docker-compose-extractor.yaml?inline=false
+cta_archive_ingestion_agent_url: https://gitlab.in2p3.fr/CTA-LAPP/cta-archive-container/raw/master/metadata/ingestion-agent.sh?inline=false
+  
+
+
