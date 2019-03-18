@@ -23,6 +23,7 @@
   get_url:
     url: "{{ cta_archive_ingestion_agent_url }}"
     dest: "{{ cta_archive_wdir }}/metadata-extractor/ingestion-agent.sh"
+    mode: 0777
 
 - name: Create environment file
   template: src=environment.j2 dest="{{ cta_archive_wdir }}/metadata-extractor/.env"
