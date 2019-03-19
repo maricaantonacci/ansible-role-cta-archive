@@ -15,7 +15,7 @@
 
 - name: Fix PWD
   replace:
-    path: "{{ cta_archive_wdir }}/metadata-extractor/docker-compose.yml"
+    dest: "{{ cta_archive_wdir }}/metadata-extractor/docker-compose.yml"
     regexp: '\$PWD'
     replace: "{{ cta_archive_wdir }}/metadata-extractor"
 
