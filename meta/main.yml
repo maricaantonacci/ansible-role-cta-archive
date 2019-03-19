@@ -1,5 +1,6 @@
 galaxy_info:
   author: marica.antonacci@gmail.com
+  role_name: cta-archive
   description: Setup CTA Archive metadata tools
   company: eXtreme-DataCloud Project
   license: Apache
@@ -15,5 +16,4 @@ galaxy_info:
     - cta
     - onedata
     - xdc
-
 dependencies: []
