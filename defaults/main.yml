@@ -2,7 +2,6 @@
 # defaults file for ansible-role-cta-archive
 cta_archive_wdir: /etc/cta_archive
 cta_archive_source_oneprovider_version: 18.02.0-rc11
-cta_archive_source_oneprovider_version: 18.02.0-rc11
 cta_archive_onezone_url:
 cta_archive_source_space_name:
 cta_archive_source_provider:
