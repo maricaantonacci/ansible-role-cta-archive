@@ -17,7 +17,7 @@
   replace:
     path: "{{ cta_archive_wdir }}/metadata-extractor/docker-compose.yml"
     regexp: '\$PWD'
-    replace: "{{ cta_archive_wdir }}/metadata-extractor" 
+    replace: "{{ cta_archive_wdir }}/metadata-extractor"
 
 - name: Download ingestion agent script
   get_url:
