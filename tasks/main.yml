@@ -35,4 +35,3 @@
   docker_service:
     project_src: "{{ cta_archive_wdir }}/metadata-extractor"
     state: present
-

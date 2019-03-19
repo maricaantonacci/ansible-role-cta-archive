@@ -12,8 +12,8 @@ galaxy_info:
       versions:
         - 7
   galaxy_tags:
-    - cta, xdc
+    - cta
+    - onedata
+    - xdc
 
-dependencies: 
-   - src: indigo-dc.docker
-     version: v1.0.0-deep
+dependencies: []
