@@ -28,10 +28,7 @@
 - name: Create environment file
   template: src=environment.j2 dest="{{ cta_archive_wdir }}/metadata-extractor/.env"
 
-- name: "Install docker-compose"
-  pip: name="docker-compose" state="present"
-
 - name: "Start the services"
-  docker_service:
-    project_src: "{{ cta_archive_wdir }}/metadata-extractor"
-    state: present
+  shell: "docker-compose up -d"
+  args:
+      chdir: "{{ cta_archive_wdir }}/metadata-extractor"
