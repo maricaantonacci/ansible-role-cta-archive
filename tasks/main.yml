@@ -29,6 +29,6 @@
   template: src=environment.j2 dest="{{ cta_archive_wdir }}/metadata-extractor/.env"
 
 - name: "Start the services"
-  command: "docker-compose up -d"
+  command: "/usr/local/bin/docker-compose/docker-compose up -d"
   args:
       chdir: "{{ cta_archive_wdir }}/metadata-extractor"
